@@ -16,4 +16,10 @@ public interface UserService {
      * @return 用户列表
      */
     List<User> getUsersByAgeRange(Integer minAge, Integer maxAge);
+
+    void updateUser(User user);
+
+    void addUser(User user);
+
+    void deleteUser(Integer id);
 }

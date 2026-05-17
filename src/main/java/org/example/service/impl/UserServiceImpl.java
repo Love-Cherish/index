@@ -23,4 +23,19 @@ public class UserServiceImpl implements UserService {
     public List<User> getUsersByAgeRange(Integer minAge, Integer maxAge) {
         return new ArrayList<>();
     }
+
+    @Override
+    public void updateUser(User user) {
+        userRepository.updateUser(user);
+    }
+
+    @Override
+    public void addUser(User user) {
+        userRepository.addUser(user);
+    }
+
+    @Override
+    public void deleteUser(Integer id) {
+        userRepository.deleteUser(id);
+    }
 }

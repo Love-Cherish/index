@@ -36,4 +36,26 @@ public class UserRepositoryImpl implements UserRepository {
         wrapper.orderByDesc(User::getId);
         return userMapper.selectPage(page, wrapper);
     }
+
+    @Override
+    public int updateUser(User user) {
+        return userMapper.updateById(user);
+    }
+
+    @Override
+    public User findById(int userId) {
+        return userMapper.selectById(userId);
+    }
+
+    @Override
+    public int addUser(User user) {
+        userMapper.insert(user);
+        return 0;
+    }
+
+    @Override
+    public int deleteUser(int userId) {
+        userMapper.deleteById(userId);
+        return 0;
+    }
 }

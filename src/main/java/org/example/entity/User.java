@@ -30,6 +30,7 @@ public class User {
 
     private Integer age;
 
+    private String password="123456";
 
     private LocalDateTime createTime;
 

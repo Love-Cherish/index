@@ -18,4 +18,12 @@ public interface UserRepository {
     List<User> findAll();
 
     Page<User> findAll(Page<User> page, User user);
+
+    int updateUser(User user);
+
+    User findById(int userId);
+
+    int addUser(User user);
+
+    int deleteUser(int userId);
 }
