@@ -1,6 +1,7 @@
 package org.example.service;
 
 import org.example.entity.User;
+import org.example.exception.ApplicationException;
 
 import java.util.List;
 
@@ -15,11 +16,12 @@ public interface UserService {
      * @param maxAge 最大年龄
      * @return 用户列表
      */
-    List<User> getUsersByAgeRange(Integer minAge, Integer maxAge);
+    List<User> getUsersByAgeRange(Integer minAge, Integer maxAge)throws ApplicationException;
 
-    void updateUser(User user);
+    void updateUser(User user)throws ApplicationException;
 
-    void addUser(User user);
+    void addUser(User user)throws ApplicationException;
 
-    void deleteUser(Integer id);
+
+    void deleteUser(Integer id)throws ApplicationException;
 }
