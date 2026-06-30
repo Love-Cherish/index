@@ -41,28 +41,28 @@ public class DataOperationException extends ApplicationException {
     /**
      * 静态抛出：字符串错误码
      */
-    public static void throwEx(String code) {
-        throw new DataOperationException(code);
+    public static DataOperationException throwEx(String code) {
+        return new DataOperationException(code);
     }
 
     /**
      * 静态抛出：字符串错误码 + 自定义消息
      */
-    public static void throwEx(String code, String msg) {
-        throw new DataOperationException(code, msg);
+    public static DataOperationException throwEx(String code, String msg) {
+        return new DataOperationException(code, msg);
     }
 
     /**
      * 静态抛出：枚举错误码（推荐）
      */
-    public static void throwEx(ErrorCodeEnum codeEnum) {
-        throw new DataOperationException(codeEnum);
+    public static DataOperationException throwEx(ErrorCodeEnum codeEnum) {
+        return new DataOperationException(codeEnum);
     }
 
     /**
      * 静态抛出：枚举错误码 + 自定义消息（推荐）
      */
-    public static void throwEx(ErrorCodeEnum codeEnum, String msg) {
-        throw new DataOperationException(codeEnum, msg);
+    public static DataOperationException throwEx(ErrorCodeEnum codeEnum, String msg) {
+        return new DataOperationException(codeEnum, msg);
     }
 }

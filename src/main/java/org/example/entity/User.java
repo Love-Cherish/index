@@ -4,6 +4,7 @@ package org.example.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -18,16 +19,16 @@ public class User {
     @TableId(type = IdType.AUTO)
     private Long id;
 
-
+    @NotNull()
     private String username;
 
-
+    @NotNull()
     private String email;
 
-
+    @NotNull()
     private String phone;
 
-
+    @NotNull()
     private Integer age;
 
     private String password="123456";

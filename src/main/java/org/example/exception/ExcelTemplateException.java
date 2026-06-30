@@ -6,33 +6,33 @@ import org.example.utils.ErrorCodeEnum;
  * 数据操作异常（数据库/数据校验/数据不存在等专用）
  * 继承 ApplicationException，属于业务异常分支
  */
-public class AuthException extends ApplicationException {
+public class ExcelTemplateException extends ApplicationException {
 
     /**
      * 字符串错误码构造（兼容旧代码）
      */
-    public AuthException(String errorCode) {
+    public ExcelTemplateException(String errorCode) {
         super(errorCode);
     }
 
     /**
      * 字符串错误码 + 自定义消息
      */
-    public AuthException(String errorCode, String customMsg) {
+    public ExcelTemplateException(String errorCode, String customMsg) {
         super(errorCode, customMsg);
     }
 
     /**
      * 枚举错误码构造（推荐）
      */
-    public AuthException(ErrorCodeEnum errorCodeEnum) {
+    public ExcelTemplateException(ErrorCodeEnum errorCodeEnum) {
         super(errorCodeEnum);
     }
 
     /**
      * 枚举错误码 + 自定义消息（推荐）
      */
-    public AuthException(ErrorCodeEnum errorCodeEnum, String customMsg) {
+    public ExcelTemplateException(ErrorCodeEnum errorCodeEnum, String customMsg) {
         super(errorCodeEnum, customMsg);
     }
 
@@ -41,28 +41,28 @@ public class AuthException extends ApplicationException {
     /**
      * 静态抛出：字符串错误码
      */
-    public static AuthException throwEx(String code) {
-        return new AuthException(code);
+    public static ExcelTemplateException throwEx(String code) {
+        return new ExcelTemplateException(code);
     }
 
     /**
      * 静态抛出：字符串错误码 + 自定义消息
      */
-    public static AuthException throwEx(String code, String msg) {
-        return new AuthException(code, msg);
+    public static ExcelTemplateException throwEx(String code, String msg) {
+        return new ExcelTemplateException(code, msg);
     }
 
     /**
      * 静态抛出：枚举错误码（推荐）
      */
-    public static AuthException throwEx(ErrorCodeEnum codeEnum) {
-        return new AuthException(codeEnum);
+    public static ExcelTemplateException throwEx(ErrorCodeEnum codeEnum) {
+        return new ExcelTemplateException(codeEnum);
     }
 
     /**
      * 静态抛出：枚举错误码 + 自定义消息（推荐）
      */
-    public static AuthException throwEx(ErrorCodeEnum codeEnum, String msg) {
-        return new AuthException(codeEnum, msg);
+    public static ExcelTemplateException ExcelTemplateException(ErrorCodeEnum codeEnum, String msg) {
+        return new ExcelTemplateException(codeEnum, msg);
     }
 }
